@@ -1,5 +1,5 @@
 # Ignore files ending with -main.py
-*-main.py
+python-data_structures/*-main.py
 
 # Include all other .py files
-!*.py
+python-data_structures/!*.py
