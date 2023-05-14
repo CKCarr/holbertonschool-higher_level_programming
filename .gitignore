@@ -1,0 +1,5 @@
+# Ignore files ending with -main.py
+*-main.py
+
+# Include all other .py files
+!*.py
