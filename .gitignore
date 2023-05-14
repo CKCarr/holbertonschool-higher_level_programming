@@ -2,6 +2,7 @@
 # Exclude all *-main.py files within python-data_structures folder
 python-data_structures/*-main.py
 *-main.py
+gitit
 # Include all other .py files within python-data_structures folder
 python-data_structures/!*.py
 
