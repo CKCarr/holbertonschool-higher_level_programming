@@ -1,12 +1,7 @@
 
-# Ignore files ending with -main.py
-*-main.py
-
 # Exclude all *-main.py files within python-data_structures folder
 python-data_structures/*-main.py
-
+*-main.py
 # Include all other .py files within python-data_structures folder
-!python-data_structures/*.py
+python-data_structures/!*.py
 
-# Include all other .py files in the repository
-!*.py
