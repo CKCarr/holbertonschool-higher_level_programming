@@ -11,5 +11,5 @@ def max_integer(my_list=[]):
         if num > max_num:
             # update variable to store new max num
             max_num = num
-            # return the final max num
-            return (max_num)
+    # return the final max num
+    return (max_num)
