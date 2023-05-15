@@ -12,4 +12,4 @@ def print_sorted_dictionary(a_dictionary):
     # iterate through sorted dict
     for key in sorted_keys:
         # print key : value pair
-        print(key + ":", a_dictionary[key])
+        print("{}: {}".format(key, a_dictionary[key]))
