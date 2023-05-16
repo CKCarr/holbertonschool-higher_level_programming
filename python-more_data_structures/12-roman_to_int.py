@@ -64,12 +64,3 @@ def roman_to_int(roman_string):
         prev_value = current_value
 
     return result
-
-        if current_value > prev_value:
-            result += current_value - 2 * prev_value
-        else:
-            result += current_value
-
-        prev_value = current_value
-
-    return result
