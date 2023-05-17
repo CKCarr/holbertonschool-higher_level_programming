@@ -13,6 +13,8 @@ def safe_print_list_integers(my_list=[], x=0):
                 num_integers += 1
         # handle exceptions
         except IndexError:
-            break  # skip if index is not an int till end of list
-    print()  # print newline
+            # skip if index is not an int till end of list
+            break
+    # print newline
+    print()
     return num_integers
