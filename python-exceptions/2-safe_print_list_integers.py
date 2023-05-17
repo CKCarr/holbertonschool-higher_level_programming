@@ -1,20 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    num_integers = 0
-    for idx in range(x):
+    num_ints = 0
+    for i in range(x):
         try:
-            # assign list index to check the value of the index
-            val = my_list[idx]
-            # check if idx value is an integer in each instance
-            if isinstance(val, int):
-                # integers have to be printed on the same line
-                print("{:d}".format(val), end="")
-                # update count by one to increment loop
-                num_integers += 1
-        # handle exceptions
+            print("{:d}".format(my_list[i]), end="")
+            num_ints += 1
+        except (ValueError, TypeError):
+            pass
         except IndexError:
-            # skip if index is not an int till end of list
-            break
-    # print newline
+            raise
     print()
-    return num_integers
+    return num_ints
+
