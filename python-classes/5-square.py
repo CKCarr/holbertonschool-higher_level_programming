@@ -60,7 +60,7 @@ class Square:
         return self.__size ** 2  # This invokes the getter
 
     def my_print(self):
-        """ 
+        """
         prints in stdout the square with the character #:
         if size is equal to 0, print an empty line
         """
