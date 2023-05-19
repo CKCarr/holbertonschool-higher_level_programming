@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 Module creates a class(type) Square &
 defines a 'Square' instance with optional 'size' attribute.
