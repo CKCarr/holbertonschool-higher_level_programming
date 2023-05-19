@@ -54,4 +54,4 @@ class Square:
         Calculates the area of the square.
         Returns: int: The area of the square
         """
-        return self.size * self.size  # This invokes the getter
+        return self.__size ** 2  # This invokes the getter
