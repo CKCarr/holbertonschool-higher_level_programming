@@ -18,4 +18,4 @@ General
     What are the basic option flags to create tests
     How to find edge cases
 --------------------------------------------------------------------------------------------------
-'/mnt/c/Users/Crysk/AppData/Local/Temp/hpujgyl0.bmp'
+'
