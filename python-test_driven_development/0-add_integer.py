@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module writes a function that adds 2 integers"""
 
+
 def add_integer(a, b=98):
     """
     Function to add two numbers together.
@@ -33,6 +34,7 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
+
 
 if __name__ == "__main__":
     import doctest
