@@ -40,7 +40,9 @@ matrix must be a matrix (list of lists) of integers/floats
 
 6. div by zero
 >>> print(matrix_divided([[1, -2, 3.4],[2, 4, 7]], 0))
-divison by zero
+Traceback (most recent call last):
+...
+division by zero
 
 7. str input div
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], '5')
