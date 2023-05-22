@@ -47,7 +47,7 @@ def matrix_divided(matrix, div):
     not_list = "matrix must be a matrix (list of lists) of integers/floats"
     size = "Each row of the matrix must have the same size"
     num = "div must be a number"
-    zero = "divison by zero"
+    zero = "division by zero"
     # matrix must be a list of lists
     if not isinstance(matrix, list):
         raise TypeError(not_list)

@@ -38,4 +38,14 @@ matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], -2.5)
 [[-0.4, -0.8, -1.2], [-1.6, -2.0, -2.4]]
 
+6. div by zero
+>>> print(matrix_divided([[1, -2, 3.4],[2, 4, 7]], 0))
+divison by zero
 
+7. str input div
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], '5')
+div must be a number
+
+8. matrix input str
+>>> matrix_divided([[8,-3],[2, 'a']], 2)
+matrix must be a matrix (list of lists) of integers/floats
