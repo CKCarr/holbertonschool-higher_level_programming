@@ -42,6 +42,7 @@ matrix must be a matrix (list of lists) of integers/floats
 >>> print(matrix_divided([[1, -2, 3.4],[2, 4, 7]], 0))
 Traceback (most recent call last):
 ...
+s
 division by zero
 
 7. str input div
