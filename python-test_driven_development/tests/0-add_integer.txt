@@ -1,5 +1,13 @@
-Test the add_integer function from the 0-add_integer module
+============================
+The ''0-add_integer'' module
+============================
+
+Test the ''add_integer'' function
+---------------------------------
+First import
+
 >>> add_integer = __import__('0-add_integer').add_integer
+
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
