@@ -7,7 +7,7 @@ Test the ''add_integer'' function
 First import
 >>> add_integer = __import__('0-add_integer').add_integer
 
-1. test pos,pos:
+1. test pos, pos:
 >>> add_integer(1, 2)
 3
 
