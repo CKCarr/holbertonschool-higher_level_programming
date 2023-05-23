@@ -28,11 +28,11 @@ def text_indentation(text):
 
     lines = text.split('\n')
     for i in range(len(lines)):
-         lines[i] = lines[i].strip()
-         if i != len(lines) - 1:
-             print(lines[i], end="\n")
-         else:
-             print(lines[i], end="")
+        lines[i] = lines[i].strip()
+        if i != len(lines) - 1:
+            print(lines[i], end="\n")
+        else:
+            print(lines[i], end="")
 
 
 if __name__ == "__main__":

@@ -48,7 +48,7 @@ to import:
 <BLANKLINE>
 any module.
 <BLANKLINE>
-<BLANKLINE>
+
 
 2. no info
 >>> text_indentation()
@@ -100,7 +100,7 @@ TypeError: text_indentation() takes 1 positional argument but 2 were given
 <BLANKLINE>
 5?
 <BLANKLINE>
-<BLANKLINE>
+
 
 9. holberton school
 >>> text_indentation("Holberton. School? How are you: John")
