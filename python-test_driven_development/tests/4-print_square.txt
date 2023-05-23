@@ -1,0 +1,45 @@
+===========================
+module ''4-print_square''
+===========================
+test function ''print_square''
+------------------------------
+
+>>> print_square = __import__('4-print_square').print_square
+
+1. empty function params
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+2. str param
+>>> print_square("square")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+3. pos int
+>>> print_square(4)
+####
+####
+####
+####
+
+4. 0 as param
+>>> print_square(0)
+
+5. 1 as param
+>>> print_square(1)
+#
+
+6. neg int
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+7. multiple params
+>>> print_square(2, 9)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
