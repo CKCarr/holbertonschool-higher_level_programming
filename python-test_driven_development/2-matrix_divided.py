@@ -60,7 +60,7 @@ def matrix_divided(matrix, div):
 
     # all row in the matrix have the same length (matrix is rectangular)
     if len(set(len(row) for row in matrix)) > 1:
-        raise TypeError("Each row of the matrix must have the same size")
+        raise TypeError(size)
 
     # the div are should be a number either int or float
     if not isinstance(div, (int, float)):
