@@ -24,8 +24,7 @@ class Rectangle:
         area(int) - return: the rectangle area.
         perimeter(int) - return: the rectangle perimeter
             perimeter equals zero if width or height is equal to 0.
-    
-    """
+"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
