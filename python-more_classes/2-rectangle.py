@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-module that Writes a class Rectangle
-that defines a rectangle
-"""
+""" module that Writes a class Rectangle
+    that defines a rectangle """
 
 
 class Rectangle:
@@ -63,4 +61,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return 2 * (self.__width + self.__height)
