@@ -101,3 +101,13 @@ TypeError: text_indentation() takes 1 positional argument but 2 were given
 5?
 <BLANKLINE>
 <BLANKLINE>
+
+9. holberton school
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
