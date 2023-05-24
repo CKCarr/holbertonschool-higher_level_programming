@@ -6,9 +6,7 @@ that defines a rectangle
 
 
 class Rectangle:
-    number_of_instances = 0
-    """
-    defines a rectangle
+    """ defines a rectangle
     Instantiation with optional width and height:
     def __init__(self, width=0, height=0):
     Private instance attribute:
@@ -30,6 +28,8 @@ class Rectangle:
     Incremented during each new instance instantiation
     Decremented during each instance deletion
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
