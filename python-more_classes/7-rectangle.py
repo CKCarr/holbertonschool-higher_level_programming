@@ -78,7 +78,7 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ("")
-        rectangle = str(self.print_symbol) * self.__width + "\n"
+        rectangle = str(self.print_symbol) * self.__width
         rectangle *= self.__height
         return rectangle
 
