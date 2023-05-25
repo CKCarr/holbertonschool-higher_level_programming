@@ -3,6 +3,10 @@
 python-data_structures/*-main.py
 *-main.py
 gitit
+.replit
+replit.nix
+venv/
+*.py.un~
 # Include all other .py files within python-data_structures folder
 python-data_structures/!*.py
 
