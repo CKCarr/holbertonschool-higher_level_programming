@@ -1,0 +1,54 @@
+================================
+The ''2-matrix_divided'' module
+================================
+
+Test the ''matrix_divided'' function
+-------------------------------------
+
+First Import
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+1. Test with a 2x2 matrix and div = 2
+>>> matrix = [[2, 4], [6, 8]]
+>>> print(matrix_divided(matrix, 2))
+[[1.0, 2.0], [3.0, 4.0]]
+
+2. Test with a 3x3 matrix and div = 3
+>>> matrix = [[3, 6, 9], [12, 15, 18], [21, 24, 27]]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+3. Test with non-rectangular matrix
+>>> matrix = [[1, 2], [3, 4, 5]]
+>>> try:
+...     print(matrix_divided(matrix, 2))
+... except TypeError as e:
+...     print(e)
+Each row of the matrix must have the same size
+
+4. Test with non-numeric elements in the matrix
+>>> matrix = [[1, 2], [3, '4']]
+>>> try:
+...     print(matrix_divided(matrix, 2))
+... except TypeError as e:
+...     print(e)
+matrix must be a matrix (list of lists) of integers/floats
+
+5. div by neg num
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -2.5)
+[[-0.4, -0.8, -1.2], [-1.6, -2.0, -2.4]]
+
+6. div by zero
+>>> print(matrix_divided([[1, -2, 3.4],[2, 4, 7]], 0))
+Traceback (most recent call last):
+...
+s
+division by zero
+
+7. str input div
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], '5')
+div must be a number
+
+8. matrix input str
+>>> matrix_divided([[8,-3],[2, 'a']], 2)
+matrix must be a matrix (list of lists) of integers/floats

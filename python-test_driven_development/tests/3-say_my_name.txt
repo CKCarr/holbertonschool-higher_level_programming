@@ -1,0 +1,41 @@
+===========================
+module ''3-say_my_name''
+===========================
+
+test function ''say_my_name''
+-----------------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+1. str, string
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+2. single str
+>>> say_my_name("John")
+My name is John
+
+3. random integers, and str
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+4. string, random integers
+>>> say_my_name("John", 123)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+5. no string given
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+6. str, not defined
+>>> say_my_name('Joe', Dirt)
+Traceback (most recent call last):
+...
+NameError: name 'Dirt' is not defined

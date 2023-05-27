@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Test the add_integer function from the 0-add_integer module
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(1, 2)
@@ -16,3 +17,53 @@ b must be an integer
 ... except Exception as e: print(e)
 ...
 a must be an integer
+=======
+============================
+The ''0-add_integer'' module
+============================
+
+Test the ''add_integer'' function
+---------------------------------
+First import
+>>> add_integer = __import__('0-add_integer').add_integer
+
+1. test pos, pos:
+>>> add_integer(1, 2)
+3
+
+2. test neg, neg:
+>>> add_integer(100, -2)
+98
+
+3. test one arg:
+>>> add_integer(2)
+100
+
+4. test float, neg:
+>>> add_integer(100.3, -2)
+98
+
+5. test int, str:
+>>> try: add_integer(4, "School")
+... except Exception as e: print(e)
+...
+b must be an integer
+
+6. test no args:
+>>> try: add_integer(None)
+... except Exception as e: print(e)
+...
+a must be an integer
+
+7. test float not a number:
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+8. test float infinity:
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>>>>>> a41fa0acb26bccad7a617404b5dc2644bba09de5

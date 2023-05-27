@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Exclude all *-main.py files within python-data_structures folder
 python-data_structures/*-main.py
@@ -6,3 +7,17 @@ gitit
 # Include all other .py files within python-data_structures folder
 python-data_structures/!*.py
 
+=======
+
+# Exclude all *-main.py files within python-data_structures folder
+python-data_structures/*-main.py
+*-main.py
+gitit
+.replit
+replit.nix
+venv/
+*.py.un~
+# Include all other .py files within python-data_structures folder
+python-data_structures/!*.py
+
+>>>>>>> a41fa0acb26bccad7a617404b5dc2644bba09de5
