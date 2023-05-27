@@ -4,8 +4,6 @@
 >>>>>>> d1ebc0a819bf71a643fbce851ddff3caa9a97ea6
 
 # Exclude all *-main.py files within python-data_structures folder
-python-data_structures/*-main.py
-*-main.py
 gitit
 <<<<<<< HEAD
 .replit
@@ -23,7 +21,6 @@ python-data_structures/!*.py
 
 # Exclude all *-main.py files within python-data_structures folder
 python-data_structures/*-main.py
-*-main.py
 gitit
 .replit
 replit.nix
