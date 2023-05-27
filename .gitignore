@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1ebc0a819bf71a643fbce851ddff3caa9a97ea6
+
+# Exclude all *-main.py files within python-data_structures folder
+python-data_structures/*-main.py
+*-main.py
+gitit
+<<<<<<< HEAD
+.replit
+replit.nix
+venv/
+*.py.un~
+# Include all other .py files within python-data_structures folder
+python-data_structures/!*.py
+
+=======
+# Include all other .py files within python-data_structures folder
+python-data_structures/!*.py
+
+=======
 
 # Exclude all *-main.py files within python-data_structures folder
 python-data_structures/*-main.py
@@ -10,3 +32,5 @@ venv/
 # Include all other .py files within python-data_structures folder
 python-data_structures/!*.py
 
+>>>>>>> a41fa0acb26bccad7a617404b5dc2644bba09de5
+>>>>>>> d1ebc0a819bf71a643fbce851ddff3caa9a97ea6
