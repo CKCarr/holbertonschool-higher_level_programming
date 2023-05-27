@@ -32,5 +32,3 @@ venv/
 # Include all other .py files within python-data_structures folder
 python-data_structures/!*.py
 
->>>>>>> a41fa0acb26bccad7a617404b5dc2644bba09de5
->>>>>>> d1ebc0a819bf71a643fbce851ddff3caa9a97ea6
