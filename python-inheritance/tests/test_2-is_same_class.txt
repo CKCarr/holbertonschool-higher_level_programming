@@ -1,0 +1,45 @@
+""" 
+Test for 2-is_same_class.py 
+Function to test: is_same_class(obj, a_class)
+"""
+================================================================
+# First Import module function to be accessed through variable
+----------------------------------------------------------------
+>>> is_same_class = __import__("2-is_same_class").is_same_class
+
+
+# Test Case 1:  'An integer'
+>>> obj = 1
+>>> is_same_class(obj, int)
+True
+>>> is_same_class(obj, float)
+False
+>>> is_same_class(obj, object)
+False
+
+# Test Case 2:  'A float'
+>>> obj = 1.5
+>>> is_same_class(obj, int)
+False
+>>> is_same_class(obj, float)
+True
+>>> is_same_class(obj, object)
+False
+
+# Test Case 3:  'A string'
+>>> obj = "Hello"
+>>> is_same_class(obj, str)
+True
+>>> is_same_class(obj, object)
+False
+
+# Test Case 4:  'An object'
+>>> obj = object()
+>>> is_same_class(obj, int)
+False
+>>> is_same_class(obj, float)
+False
+>>> is_same_class(obj, str)
+False
+>>> is_same_class(obj, object)
+True
