@@ -11,15 +11,43 @@
 # Test Case 1:  Test with an empty list.
 >>> my_list = MyList([])
 >>> my_list.print_sorted()
-Expected Output: []
+[]
 
 # Test Case 2:  Test with a list of one element.
 >>> my_list = MyList([5])
 >>> my_list.print_sorted()
-Expected Output: [5]
+[5]
 
 # Test Case 3:  Test with a list of elements that are already sorted.
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 
 # Test Case 4:  Test with a list of elements in reverse sorted order.
+>>> my_list = MyList([5, 4, 3, 2, 1])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 
 # Test Case 5:  Test with a list of elements in random order.
+>>> my_list = MyList([3, 1, 4, 2, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test Case 6:  Test with a list of strings
+>>> my_list = MyList(['This', 'Is', 'a', 'string', 'Sorted'])
+>>> my_list.print_sorted()
+['Is', 'Sorted', 'This', 'a', 'string']
+
+# Test Case 7: cat 1-main.py to the test
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
