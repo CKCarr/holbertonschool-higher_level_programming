@@ -1,0 +1,71 @@
+'''
+Test for module: 7-base_geometry.py
+Functions to test: area() and integer_validator()
+'''
+==========================================
+
+# Import necessary class
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+------------------------------------------
+# Test Case 1:  Check instantiation.
+>>> bg = BaseGeometry()
+
+# Test Case 2: Test area() function.
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Test Case 3: Test integer_validator with valid integer.
+Traceback (most recent call last):
+...
+>>> bg.integer_validator("age", 1)
+
+# Test Case 4: Test integer_validator with zero.
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+# Test Case 5: Test integer_validator with negative integer.
+>>> bg.integer_validator("age", -4)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+# Test Case 6: Test integer_validator with non-integer input.
+>>> bg.integer_validator("age", "4")
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# Test Case 7: Test integer_validator with tuple input.
+>>> bg.integer_validator("age", (4,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# Test Case 8: Test integer_validator with list input.
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# Test Case 9: Test integer_validator with boolean input.
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# Test Case 10: Test integer_validator with set input.
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# Test Case 11: Test integer_validator with None input.
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
