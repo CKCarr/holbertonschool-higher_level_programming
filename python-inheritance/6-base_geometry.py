@@ -8,7 +8,6 @@ Raises:  Exception: with the message "area() is not implemented"
 class BaseGeometry:
     """A class called 'BaseGeometry' that contains an unimplemented method."""
 
-
     def area(self):
         """ Function Raises an exception when called.
         indicating that this method has not yet been implemented.

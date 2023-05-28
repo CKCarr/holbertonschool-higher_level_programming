@@ -8,13 +8,11 @@ Raises:  Exception: with the message "area() is not implemented"
 class BaseGeometry:
     """A class called 'BaseGeometry' that contains an unimplemented method."""
 
-
     def area(self):
         """ Public instance method that Raises an exception when called.
         indicating that this method has not yet been implemented.
         """
         raise Exception("area() is not implemented")
-
 
     def integer_validator(self, name, value):
         """ public instance method that validates value
@@ -29,7 +27,7 @@ class BaseGeometry:
                     Raise: ValueError exception: with the message
                     "<name> must be greater than 0"
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
