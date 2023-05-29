@@ -1,8 +1,10 @@
 {
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
     "files.eol": "\n",
     "editor.wordWrapColumn": 79,
     "editor.rulers": [79],
     "python.linting.pycodestyleArgs": ["--max-line-length=79"],
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "files.insertFinalNewline": true,
+    "diffEditor.wordWrap": "on"
 }
