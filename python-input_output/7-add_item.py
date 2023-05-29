@@ -10,19 +10,31 @@ Does not manage file permissions / exceptions.
 """
 
 import sys
-import imp
-
-# Import module "5-save_to_json_file.py"
-save_to_json_module = imp.load_source("save_to_json_file",
-                                      "./5-save_to_json_file.py")
-save_to_json_file = save_to_json_module.save_to_json_file
-
-# Import module "6-load_from_json_file.py"
-load_from_json_module = imp.load_source("load_from_json_file",
-                                        "./6-load_from_json_file.py")
-load_from_json_file = load_from_json_module.load_from_json_file
+import importlib
 
 
+save_to_json_file = importlib.import_module("5-save_to_json_file")
+load_from_json_file = importlib.import_module("6-load_from_json_file")
+# Load the code from file as a string
+with open("5-save_to_json_file.py", "r") as file:
+    save_to_json_code = file.read()
+
+with open("6-load_from_json_file.py", "r") as file:
+    load_from_json_code = file.read()
+
+# Execute the module code and capture the resulting globals dictionary
+save_to_json_globals = {}
+exec(save_to_json_code, save_to_json_globals)
+
+load_from_json_globals = {}
+exec(load_from_json_code, load_from_json_globals)
+
+# Access the functions from the global dictionary
+save_to_json_file = save_to_json_globals["save_to_json_file"]
+load_from_json_file = load_from_json_globals["load_from_json_file"]
+
+
+# function takes a list of command line arguments
 def add_args_to_list(args):
     """ Function that adds all command line arguments to a Python List.
 
@@ -45,8 +57,10 @@ def add_args_to_list(args):
     return data
 
 
-# Extract command line arguments excluding the script name argv[1:...]
-args = sys.argv[1:]
-# Add args to list, and save updated list to add_item.json
-updated_arg_list = add_args_to_list(args)
-print(updated_arg_list)
+if __name__ == "__main__":
+    # Extract command line arguments excluding the script name argv[1:...]
+    args = sys.argv[1:]
+
+    # Add args to list, and save updated list to add_item.json
+    updated_arg_list = add_args_to_list(args)
+    print(updated_arg_list)
