@@ -15,9 +15,15 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 # Read existing data from add_item.json or create an empty list
+with open("add_item.json", "a")
+try:
+    myfile = load_from_json_file("add_item.json")
+except ValueError:
+    myfile = []
+save_to_json_file(myfile + sys.argv[1:], "add_item.json")
 try:
     data = load_from_json_file(filename)
-except FileNotFoundError:
+except ValueError:
     data = []
 
 # Append the command-line arguments to the list
