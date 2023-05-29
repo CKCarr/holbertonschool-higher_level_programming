@@ -21,7 +21,7 @@ except FileNotFoundError:
     data = []
 
 # Append the command-line arguments to the list
-data.extend(sys.argv[1:])
+data += sys.argv[1:]
 
 # Save the updated list to add_item.json
 save_to_json_file(data, filename)
