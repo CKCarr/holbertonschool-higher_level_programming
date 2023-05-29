@@ -54,10 +54,10 @@ def add_args_to_list(args):
     return data
 
 
-if __name__ == "__main__":
-    # Extract command line arguments excluding the script name argv[1:...]
-    args = sys.argv[1:]
 
-    # Add args to list, and save updated list to add_item.json
-    updated_arg_list = add_args_to_list(args)
-    print(updated_arg_list)
+# Extract command line arguments excluding the script name argv[1:...]
+args = sys.argv[1:]
+
+# Add args to list, and save updated list to add_item.json
+updated_arg_list = add_args_to_list(args)
+print(updated_arg_list)
