@@ -21,12 +21,6 @@ try:
     myfile = load_from_json_file("add_item.json")
 except ValueError:
     myfile = []
-save_to_json_file(myfile + sys.argv[1:], "add_item.json")
-try:
-    data = load_from_json_file(filename)
-except ValueError:
-    data = []
-
 # Append the command-line arguments to the list
 data += sys.argv[1:]
 
