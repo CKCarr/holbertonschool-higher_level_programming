@@ -11,6 +11,7 @@ Does not manage file permissions / exceptions.
 
 import sys
 
+
 # Load the code from file as a string
 with open("5-save_to_json_file.py", "r") as file:
     save_to_json_code = file.read()
@@ -52,6 +53,8 @@ def add_args_to_list(args):
     save_to_json_file(data, "add_item.json")
     return data
 
+
+if __name__ == "__main__":
     # Extract command line arguments excluding the script name argv[1:...]
     args = sys.argv[1:]
 
