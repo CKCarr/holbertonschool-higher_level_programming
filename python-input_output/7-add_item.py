@@ -13,12 +13,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 filename = "add_item.json"
 
 try:
-    with open(filename, "r") as file:
-        myfile = load_from_json_file(filename)
-except FileNotFoundError:
-    myfile = []
+    data_to_file = load_from_json_file(filename)
+except ValueError:
+    data_to_file = []
 
-myfile += sys.argv[1:]
+data_to_file.extend(sys.argv[1:])
 
-with open(filename, "w") as file:
-    save_to_json_file(myfile, filename)
+save_to_json_file(data_to_file, filename)
