@@ -2,11 +2,11 @@
 """ This module Writes a class Student that defines a student.
 
     Public instance attributes:
-        and instantiation with: 
+        and instantiation with:
             first_name: (str) "first name of student"
             last_name: (str) "last name of student"
             age: (int)  age of a student
-    Public method: 'to_json' retrieves a dictionary representation 
+    Public method: 'to_json' retrieves a dictionary representation
     of a Student instance
     Returns: dictionary of a student instance """
 
@@ -19,9 +19,9 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """ Retrieves a dictionary representation of a Student instance 
+        """ Retrieves a dictionary representation of a Student instance
 
         Returns:
-            dict: 
+            dict:
         """
         return self.__dict__
