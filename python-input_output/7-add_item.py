@@ -22,13 +22,15 @@ load_from_json_file = (
 )
 
 filename = "add_item.json"
+
 # 'data' read from JSON file and stored in variable
 try:
     data_to_file = load_from_json_file(filename)
-# If the file doesn’t exist, it should be created
 except FileNotFoundError:
     data_to_file = []
+
 # extend method is used to append multiple elements to a list.
 data_to_file.extend(sys.argv[1:])
+
 # list 'data' must be saved as a JSON rep in a file
 save_to_json_file(data_to_file, filename)
