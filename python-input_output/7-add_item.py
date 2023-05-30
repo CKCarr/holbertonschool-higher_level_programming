@@ -9,7 +9,6 @@ If the file doesn’t exist, it should be created
 Does not manage file permissions / exceptions.
 """
 
-
 import sys
 import importlib
 
@@ -23,14 +22,14 @@ load_from_json_file = (
 
 filename = "add_item.json"
 
-# 'data' read from JSON file and stored in variable
+# Try to load the list from the file, or create a new one if it doesn't exist
 try:
-    data_to_file = load_from_json_file(filename)
+    my_list = load_from_json_file(filename)
 except FileNotFoundError:
-    data_to_file = []
+    my_list = []
 
-# extend method is used to append multiple elements to a list.
-data_to_file.extend(sys.argv[1:])
+# Add all command line arguments to the list
+my_list.extend(sys.argv[1:])
 
-# list 'data' must be saved as a JSON rep in a file
-save_to_json_file(data_to_file, filename)
+# Save the list to the file
+save_to_json_file(my_list, filename)
