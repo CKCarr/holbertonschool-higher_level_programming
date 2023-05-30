@@ -11,6 +11,7 @@ Does not manage file permissions / exceptions.
 
 
 import sys
+from typing import List
 import importlib
 
 # Use importlib to import modules with non-standard names
@@ -21,16 +22,29 @@ load_from_json_file = (
     importlib.import_module('6-load_from_json_file').load_from_json_file
 )
 
-filename = "add_item.json"
 
-# Try to load the list from the file, or create a new one if it doesn't exist
-try:
-    my_list = load_from_json_file(filename)
-except FileNotFoundError:
-    my_list = []
+def add_items_to_list(args: List[str]):
+    """ script that adds all arguments to a Python list,
+and then save them to a file.
 
-# Add all command line arguments to the list
-my_list.extend(sys.argv[1:])
+    Args:
+        args (List[str]): args are key to a list of strings
+    """
+    try:
+        # Load existing items from file, if it exists
+        items = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        # If file doesn't exist, start with an empty list
+        items = []
 
-# Save the list to the file
-save_to_json_file(my_list, filename)
+    # Add new items to the list
+    items.extend(args)
+
+    # Save the updated list to file
+    save_to_json_file(items, "add_item.json")
+
+
+if __name__ == "__main__":
+    # Remove the script name from arguments
+    arguments = sys.argv[1:]
+    add_items_to_list(arguments)
