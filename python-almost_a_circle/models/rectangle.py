@@ -25,7 +25,11 @@ class Rectangle(Base):
             width (int): width of the Rectangle
             height (int): height of the Rectangle
             x (int): horizontal offset (default 0)
-            y (int): vertical offset (default 0) """
+            y (int): vertical offset (default 0)
+        Raises:
+        TypeError: If width, height, x or y is not an integer
+        ValueError: If width or height is less than or equal to zero,
+        or if x or y is less than zero """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -46,6 +50,10 @@ class Rectangle(Base):
         """ Setter for the __width of the Rectangle.
             Args:
                 value (int): The width of the Rectangle. """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -61,6 +69,10 @@ class Rectangle(Base):
         """ Setter for the __height of the Rectangle
             Args:
                 value (int): The height of the Rectangle. """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -73,6 +85,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """ Setter for the x (horizontal offset) of the Rectangle. """
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -85,6 +101,8 @@ class Rectangle(Base):
     def y(self, value):
         """ Setter for the private instance attribute y (vertical offset) of
         the Rectangle. """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
-
-# Public Methods
