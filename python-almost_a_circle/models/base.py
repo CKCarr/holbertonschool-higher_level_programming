@@ -10,9 +10,15 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ class constructor 
-
+        """ class constructor for Base class with optional id attribute that is
+        set to None by default. If id is not None, assign the public instance.
         Args:
             id (int, optional): public instance attribute . Defaults to None.
+                if ID is NULL then increment __nb_objects and assign to id
+                else assign id to public instance attribute id
         """
         if id is None:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+        else:
+            self.id = id
