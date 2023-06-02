@@ -117,9 +117,12 @@ class Rectangle(Base):
     def display(self):
         """ Public instance method that prints
         the Rectangle instance with '#' character in stdout.
+        ''Updated:'' to handle x and y offsets.
         Returns: The area of the Rectangle. """
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """ Public instance method that returns a string representation of
