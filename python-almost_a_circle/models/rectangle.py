@@ -155,7 +155,7 @@ class Rectangle(Base):
                 """
         attributes = ["id", 'width', "height", 'x', "y"]
         #  if args exist and is not empty, use args
-        if args and len(args) != 0:
+        if args and len(args) > 0:
             for attribute, value in zip(attributes, args):
                 setattr(self, attribute, value)
         # if no args exist or args id empty use kwargs
