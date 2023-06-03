@@ -133,3 +133,17 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height
             ))
+
+    def update(self, *args):
+        """ Public instance method that assigns an argument to each attribute.
+        Args:
+            *args (list): A list of arguments.
+                1st argument should be the id attribute
+                2nd argument should be the width attribute
+                3rd argument should be the height attribute
+                4th argument should be the x attribute
+                5th argument should be the y attribute
+                """
+        attributes = ["id", 'width', "height", 'x', "y"]
+        for attribute, value in zip(attributes, args):
+            setattr(self, attribute, value)
