@@ -43,6 +43,23 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def to_dictionary(self):
+        """ Public instance method that returns the dictionary representation
+        of a Square. This dictionary must contain:
+            Returns: The dictionary representation of a Square.
+            This dictionary must contain:
+                id: id of the square
+                size: size of the square
+                x: x-coordinate of the square
+                y: y-coordinate of the square
+        """
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
+
     def update(self, *args, **kwargs):
         """ Public method that updates or assigns attributes.
         each key in the dictionary is an attribute to the instance.
