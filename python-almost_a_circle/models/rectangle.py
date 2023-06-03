@@ -134,7 +134,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height
             ))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Public instance method that assigns an argument to each attribute.
         Args:
             *args (list): A list of arguments.
@@ -143,7 +143,22 @@ class Rectangle(Base):
                 3rd argument should be the height attribute
                 4th argument should be the x attribute
                 5th argument should be the y attribute
+            ''updated'': to assign key/value argument to attributes.
+            **kwargs (dict): A dictionary of key/value
+            arguments to assign to attributes.
+                **kwargs are skipped if *args exist and is
+                not empty
+            Each key in the dictionary represents an attribute to the instance.
+            **order was super important for args to work
+        but with kwargs order is not important.**
+        Returns: None
                 """
         attributes = ["id", 'width', "height", 'x', "y"]
-        for attribute, value in zip(attributes, args):
-            setattr(self, attribute, value)
+        #  if args exist and is not empty, use args
+        if args and len(args) != 0:
+            for attribute, value in zip(attributes, args):
+                setattr(self, attribute, value)
+        # if no args exist or args id empty use kwargs
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
