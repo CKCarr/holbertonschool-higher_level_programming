@@ -36,6 +36,18 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """ Static method that Returns: the list of the JSON string
+
+        Args:
+            json_string (string): a string representing a list of
+            dictionaries
+        """
+        if not json_string:
+            return []
+        return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """ Class method writes the JSON representation of a string to a file.
