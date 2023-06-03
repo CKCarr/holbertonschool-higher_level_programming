@@ -43,17 +43,6 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def __str__(self):
-        """
-        Overloading the __str__ method for the Square class.
-            Returns: A string representation of a Square instance.
-            [Square] (<id>) <x>/<y> - <size>
-            **size can be width or height they are equal**
-        """
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width
-            )
-
     def update(self, *args, **kwargs):
         """ Public method that updates or assigns attributes.
         each key in the dictionary is an attribute to the instance.
@@ -93,3 +82,14 @@ class Square(Rectangle):
                         self.height = value
                     else:
                         setattr(self, key, value)
+
+    def __str__(self):
+        """
+        Overloading the __str__ method for the Square class.
+            Returns: A string representation of a Square instance.
+            [Square] (<id>) <x>/<y> - <size>
+            **size can be width or height they are equal**
+        """
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width
+            )

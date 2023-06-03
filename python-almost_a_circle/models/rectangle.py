@@ -124,15 +124,18 @@ class Rectangle(Base):
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
-    def __str__(self):
-        """ Public instance method that returns a string representation of
-        the Rectangle instance.
-        Return:
-        [Rectangle] (<id>) <x>/<y> - <width>/<height>
-        """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.__x, self.__y, self.__width, self.__height
-            ))
+    def to_dictionary(self):
+        """ Public instance that returns the dictionary representation
+        of a Rectangle.
+        Returns:
+            A dictionary representation of a Rectangle. """
+        return {
+            "id":  self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
 
     def update(self, *args, **kwargs):
         """ Public instance method that assigns an argument to each attribute.
@@ -162,3 +165,13 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def __str__(self):
+        """ Public instance method that returns a string representation of
+        the Rectangle instance.
+        Return:
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height
+            ))
