@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """ Square class that inherits from Rectangle class.
     **As reminder: a Square is a Rectangle with the same width and height**
-        """
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """
         Constructor of the Square class that
@@ -33,3 +33,23 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width
             )
+
+    @property
+    def size(self):
+        """ Getter for the public instance attribute:
+                'size' of the Square.
+            Returns:
+                The size of the Square.
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """ Setter for the public instance attribute:
+                'size' of the Square.
+                Args:
+                    value (int): The size of the Square.
+                    Sets both width and height to the same value
+        """
+        self.width = value
+        self.height = value
