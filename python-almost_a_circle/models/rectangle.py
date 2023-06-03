@@ -9,7 +9,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ Constructor of the Rectangle class that inherits from Base class.
+    """ Rectangle class that inherits from Base class.
 
     Args:
         Base (class): The class to inherit from.
