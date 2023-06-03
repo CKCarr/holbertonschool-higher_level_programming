@@ -67,3 +67,20 @@ class Base:
         # write the JSON string to a file
         with open(filename, "w") as file:
             file.write(json_str)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Class method that returns an instance of a class
+            with all attribute values already set.
+        Args:
+            cls (class) : the class to create an instance of.
+            **dictionary (dict): double pointer to a dictionary."""
+        # create a dummy instance for either cls to be created
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        # update the dummy instance with the dictionary
+        dummy.update(**dictionary)
+        # we created the instance of the class with all attrs set
+        return dummy
