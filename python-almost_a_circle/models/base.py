@@ -90,7 +90,7 @@ class Base:
         """ Class method that Returns: A list of instances.
         """
         # create a class name JSON file
-        filename = cls.__name__ + "json"
+        filename = cls.__name__ + ".json"
         # try to open the file
         try:
             with open(filename, "r") as file:
