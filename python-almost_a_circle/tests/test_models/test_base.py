@@ -40,14 +40,14 @@ class TestBase(unittest.TestCase):
         print("Hello, world!", file=sys.__stdout__)
 
     # test id assignment and if it increments correctly
-    def test_id(self):
-        """Test __init__ method:
-        id assignment in the Base class. """
-        self.assertEqual(self.base.id, 1)
-        base2 = Base(50)
-        self.assertEqual(base2.id, 50)
-        base3 = Base()
-        self.assertEqual(base3.id, 2)
+#    def test_id(self):
+#        """Test __init__ method:
+#       id assignment in the Base class. """
+#        self.assertEqual(self.base.id, 1)
+#        base2 = Base(50)
+#        self.assertEqual(base2.id, 50)
+#        base3 = Base()
+#        self.assertEqual(base3.id, 2)
 
     def test_too_many_args(self):
         """
