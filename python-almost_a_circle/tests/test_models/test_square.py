@@ -24,7 +24,7 @@ class TestSquare(unittest.TestCase):
         self.square = Square(1)
 
         # reset __nb_objects to 0 before each test
-#        Base._Base__nb_objects = 0
+        Base._Base__nb_objects = 0
 
     def tearDown(self):
         """Tear down test method"""
