@@ -37,17 +37,18 @@ class TestRectangle(unittest.TestCase):
             pass
 
     # test id assignment and if it increments correctly
-#    def test_id(self):
-#        """Test __init__ method:
-#        id assignment in the Rectangle class. """
-#        print(f"Actual id: {self.rectangle.id}")
-#        self.assertEqual(self.rectangle.id, 1)
-#        rectangle2 = Rectangle(50, 50)
-#        print(f"Actual id: {rectangle2.id}")
-#        self.assertEqual(rectangle2.id, 1)
-#        rectangle3 = Rectangle(1, 1)
-#        print(f"Actual id: {rectangle3.id}")
-#        self.assertEqual(rectangle3.id, 2)
+    def test_id(self):
+        """Test __init__ method:
+        id assignment in the Rectangle class.
+        """
+        print(f"Actual id: {self.rectangle.id}")
+        self.assertEqual(self.rectangle.id, 1)
+        rectangle2 = Rectangle(50, 50)
+        print(f"Actual id: {rectangle2.id}")
+        self.assertEqual(rectangle2.id, 1)
+        rectangle3 = Rectangle(1, 1)
+        print(f"Actual id: {rectangle3.id}")
+        self.assertEqual(rectangle3.id, 2)
 
     # test to many args to init method
     def test_too_many_args(self):
