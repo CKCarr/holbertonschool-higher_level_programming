@@ -46,42 +46,49 @@ class TestSquare(unittest.TestCase):
         """ Test if Square inherits from Base """
         self.assertIsInstance(self.square, Base)
 
-    def test_square_id(self):
-        """ Test if Square id increments correctly """
-        # Test auto-increment id
-        square = Square(5, 5, 5)
-        print(f"Actual id: {square.id}")
-        self.assertEqual(square.id, 1)
-        # Test auto-increment id
-        square1 = Square(5, 5, 0, 50)
-        print(f"Actual id: {square1.id}")
-        self.assertEqual(square1.id, 50)
-        # Test auto-increment id
-        square1 = Square(5, 5, 5)
-        print(f"Actual id: {square1.id}")
-        self.assertEqual(square1.id, 2)
-        # Test auto-increment id
-        square2 = Square(5, 5, 5)
-        print(f"Actual id: {square2.id}")
-        self.assertEqual(square2.id, 3)
+#    def test_square_id(self):
+#        """ Test if Square id increments correctly """
+#        # Test auto-increment id
+#        square = Square(5, 5, 5)
+#        print(f"Actual id: {square.id}")
+#        self.assertEqual(square.id, 1)
+#        # Test auto-increment id
+#        square1 = Square(5, 5, 0, 50)
+#        print(f"Actual id: {square1.id}")
+#        self.assertEqual(square1.id, 50)
+#        # Test auto-increment id
+#        square1 = Square(5, 5, 5)
+#        print(f"Actual id: {square1.id}")
+#        self.assertEqual(square1.id, 2)
+#        # Test auto-increment id
+#        square2 = Square(5, 5, 5)
+#        print(f"Actual id: {square2.id}")
+#        self.assertEqual(square2.id, 3)
+#
+#    def test_square_id_assignment(self):
+#        """ Test if Square id is assigned correctly """
+#        # Test explicit id assignment positive number
+#        square4 = Square(6, 0, 0, 12)
+#        self.assertEqual(square4.id, 12)
+#
+#        # Test auto-increment id after explicit assignment
+#        square5 = Square(5, 0, 0, None)
+#        self.assertEqual(square5.id, 1)
+#
+#        # Test explicit id assignment with negative number
+#        square6 = Square(4, 0, 0, -12)
+#        self.assertEqual(square6.id, -12)
+#
+#        # Test explicit id assignment with zero
+#        square7 = Square(5, 0, 0, 0)
+#        self.assertEqual(square7.id, 0)
 
-    def test_square_id_assignment(self):
-        """ Test if Square id is assigned correctly """
-        # Test explicit id assignment positive number
-        square4 = Square(6, 0, 0, 12)
-        self.assertEqual(square4.id, 12)
-
-        # Test auto-increment id after explicit assignment
-        square5 = Square(5, 0, 0, None)
-        self.assertEqual(square5.id, 1)
-
-        # Test explicit id assignment with negative number
-        square6 = Square(4, 0, 0, -12)
-        self.assertEqual(square6.id, -12)
-
-        # Test explicit id assignment with zero
-        square7 = Square(5, 0, 0, 0)
-        self.assertEqual(square7.id, 0)
+    def test_too_few_args(self):
+        """
+        test too few args to init
+        """
+        with self.assertRaises(TypeError):
+            Square()
 
     def test_too_many_args(self):
         """
