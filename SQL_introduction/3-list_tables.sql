@@ -2,5 +2,4 @@
 -- database name will be passed as argument of mysql command.
 
 -- list all mysql database tables
-USE mysql;
 SHOW tables;
