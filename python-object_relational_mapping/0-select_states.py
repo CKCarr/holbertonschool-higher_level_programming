@@ -9,7 +9,8 @@ import sys
 
 if __name__ == "__main__":
     """
-    
+    Access database and fetch all states,
+    print results, and close database.
     """
     # Get command line arguments
     mysql_username = sys.argv[1]
@@ -18,11 +19,11 @@ if __name__ == "__main__":
 
     # Connect to mySQL server
     db = MySQLdb.connect(
-        host = 'localhost',
-        port = 3306,
-        user = mysql_username,
-        password = mysql_password,
-        db = database_name
+        host='localhost',
+        port=3306,
+        user=mysql_username,
+        password=mysql_password,
+        db=database_name
     )
 
     # create a cursor object to interact with the database
