@@ -5,8 +5,8 @@
     to work with MySQLAlchemy ORM.
 """
 
-from SQLAlchemy import Column, Integer, String
-from SQLAlchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
