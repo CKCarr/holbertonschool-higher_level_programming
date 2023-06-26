@@ -14,8 +14,8 @@ def filter_states(mysql_username, mysql_password, database_name, state_name):
     cursor = db.cursor()
 
     # Prepare the SQL query with user input
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cursor.execute(query, (state_name,))  # Pass state_name as a parameter to prevent SQL injection
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query)
 
     # Fetch the results
     results = cursor.fetchall()
