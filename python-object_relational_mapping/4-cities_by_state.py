@@ -1,22 +1,49 @@
--- Create states table in hbtn_0e_4_usa with some data
-CREATE DATABASE IF NOT EXISTS hbtn_0e_4_usa;
-USE hbtn_0e_4_usa;
-CREATE TABLE IF NOT EXISTS states (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id)
-);
-INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
+#!/usr/bin/python3
+"""
+script that takes in an argument and displays
+all values in the states table of hbtn_0e_0_usa where
+name matches the argument.
+"""
 
-CREATE TABLE IF NOT EXISTS cities (
-    id INT NOT NULL AUTO_INCREMENT,
-    state_id INT NOT NULL,
-    name VARCHAR(256) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY(state_id) REFERENCES states(id)
-);
-INSERT INTO cities (state_id, name) VALUES (1, "San Francisco"), (1, "San Jose"), (1, "Los Angeles"), (1, "Fremont"), (1, "Livermore");
-INSERT INTO cities (state_id, name) VALUES (2, "Page"), (2, "Phoenix");
-INSERT INTO cities (state_id, name) VALUES (3, "Dallas"), (3, "Houston"), (3, "Austin");
-INSERT INTO cities (state_id, name) VALUES (4, "New York");
-INSERT INTO cities (state_id, name) VALUES (5, "Las Vegas"), (5, "Reno"), (5, "Henderson"), (5, "Carson City");
+import MySQLdb
+import sys
+
+if __name__ == "__main__":
+    """
+    Access database and fetch all states,
+    tests with user input as params,
+    print results, and close database.
+    """
+    # Get command line arguments
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    # state_name = sys.argv[4]
+
+    # Connect to mySQL server
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=mysql_username,
+        password=mysql_password,
+        db=database_name
+    )
+
+    # create a cursor object to interact with the database
+    cursor = db.cursor()
+
+    # Create the query and prepare to have user input
+    query = "SELECT * FROM cities \
+            ORDER BY cities.id ASC"
+
+    # Execute the query and fetch results
+    cursor.execute(query)
+    results = cursor.fetchall()
+
+    # Display the results
+    for state in results:
+        print(state)
+
+    # close the cursor and database connection
+    cursor.close()
+    db.close()
