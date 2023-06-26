@@ -33,16 +33,18 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Create the query and prepare to have user input
-    query = "SELECT * FROM cities \
-            ORDER BY cities.id ASC"
+    query = "SELECT cities.id, cities.name, states.name \
+            FROM cities JOIN states \
+            ON cities.state_id = states.id \
+            ORDER by cities.id ASC"
 
     # Execute the query and fetch results
     cursor.execute(query)
     results = cursor.fetchall()
 
     # Display the results
-    for state in results:
-        print(state)
+    for city in results:
+        print(city)
 
     # close the cursor and database connection
     cursor.close()
