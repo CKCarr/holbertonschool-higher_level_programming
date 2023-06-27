@@ -19,13 +19,18 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3])
     # Create engine and session
     engine = create_engine(db_uri)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Create a state object and add it to the session
-    new_state = State(name='Louisiana')
-    session.add(new_state)
-    session.commit()
+    # Query all state objects and sort by states.id
+    states = session.query(State).filter(
+        State.id == 2).first()
 
-    # print the results
-    print(new_state.id)
+    # Print the result
+    if states:
+        state.name = "New Mexico"
+        session.commit()
+        print("State name updated successfully")
+    else:
+        print("State not found")
