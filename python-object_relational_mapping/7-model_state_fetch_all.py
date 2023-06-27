@@ -24,8 +24,12 @@ if __name__ == "__main__":
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
 
-    # Create engine and session    
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    # Define the database uri
+    db_uri = f"mysql+mysqldb://{mysql_username}: \
+    {mysql_password}@localhost:3306/{database_name}"
+
+    # Create engine and session
+    engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
     session = Session()
 
