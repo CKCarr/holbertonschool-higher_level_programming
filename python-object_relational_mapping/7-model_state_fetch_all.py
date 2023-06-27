@@ -17,7 +17,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: python3 7-model_state_fetch_all.py \
               [mysql_username] [mysql_password] [database_name]")
-        sys(exit)
+        sys.exit(1)
 
     # get the command-line arguments
     mysql_username = sys.argv[1]
