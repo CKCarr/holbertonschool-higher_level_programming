@@ -14,5 +14,5 @@ const argToInt = Number(checkArg);
 if (!isNaN(argToInt)) {
   console.log(`My number: ${argToInt}`);
 } else {
-  console.log("Not a number");
+  console.log('Not a number');
 }
