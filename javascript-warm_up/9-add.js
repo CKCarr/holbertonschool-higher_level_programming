@@ -20,8 +20,8 @@ function add (int1, int2) {
 const parInt1 = parseInt(int1);
 const parInt2 = parseInt(int2);
 
-// check if one or the other are NaN for output: NaN :: not else{"log"}
-if (!isNaN(parInt1) || !isNaN(parInt2)) {
+// check if parsed args are ints
+if (!isNaN(parInt1) && !isNaN(parInt2)) {
   // create variable for result and call function on parsed cli args
   const result = add(parInt1, parInt2);
   console.log(result);
