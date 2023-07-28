@@ -12,7 +12,7 @@ const checkArg = process.argv[2];
 // Use Number() to check if arg can convert to a number and convert it
 const argToInt = Number(checkArg);
 if (!isNaN(argToInt)) {
-  console.log("My number: ${argToInt}");
+  console.log(`My number: ${argToInt}`);
 } else {
   console.log("Not a number");
 }
