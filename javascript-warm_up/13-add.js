@@ -7,7 +7,7 @@ Write a function that returns the addition of 2 integers.
  */
 
 // Function that returns the addition of 2 integers
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
