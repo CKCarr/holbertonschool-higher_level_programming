@@ -13,8 +13,8 @@ const int1 = process.argv[2];
 const int2 = process.argv[3];
 
 // create function to add ints
-function add(int1, int2) {
-  return (int1 + int2);
+function add (a, b) {
+  return (a + b);
 }
 // parse and convert command line args to ints
 const parInt1 = parseInt(int1);
