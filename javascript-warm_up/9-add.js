@@ -8,24 +8,17 @@ Write a script that prints the addition of 2 integers
     You are not allowed to use var
  */
 
+// create function to add ints
+function add (a, b) {
+  return a + b;
+}
 // create variables for command line args
 const int1 = process.argv[2];
 const int2 = process.argv[3];
-
-// create function to add ints
-function add (a, b) {
-  return (a + b);
-}
 // parse and convert command line args to ints
 const parInt1 = parseInt(int1);
 const parInt2 = parseInt(int2);
 
-// check if parsed args are ints
-if (!isNaN(parInt1) || !isNaN(parInt2)) {
-  // create variable for result and call function on parsed cli args
-  const result = add(parInt1, parInt2);
-  console.log(result);
-} else {
-  // if commline args are NaN
-  console.log('Invalid arguments. Please provide two integers');
-}
+// create variable for result and call function on parsed cli args
+const result = add(parInt1, parInt2);
+console.log(result);
