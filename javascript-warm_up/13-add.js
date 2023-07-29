@@ -6,10 +6,10 @@ Write a function that returns the addition of 2 integers.
     You are not allowed to use var
  */
 
-// function that adds two ints
-function add (a, b) {
+// Function that returns the addition of 2 integers
+function add(a, b) {
   return a + b;
 }
 
-// Export add() function to make it visible from outside
-module.exports = add;
+// Export the 'add' function to make it visible from outsid
+exports.add = add;
