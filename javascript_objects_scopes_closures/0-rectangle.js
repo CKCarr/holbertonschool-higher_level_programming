@@ -5,7 +5,7 @@ Write an empty class Rectangle that defines a rectangle:
  */
 
 class Rectangle {
-    // This is an empty Rectangle class
-  }
+  // This is an empty Rectangle class
+}
 
-  module.exports = Rectangle;
+module.exports = Rectangle;
