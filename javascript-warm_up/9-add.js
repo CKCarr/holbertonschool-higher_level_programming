@@ -13,7 +13,7 @@ const int1 = process.argv[2];
 const int2 = process.argv[3];
 
 // create function to add ints
-function add (int1, int2) {
+function add(int1, int2) {
   return (int1 + int2);
 }
 // parse and convert command line args to ints
@@ -21,7 +21,7 @@ const parInt1 = parseInt(int1);
 const parInt2 = parseInt(int2);
 
 // check if parsed args are ints
-if (!isNaN(parInt1) && !isNaN(parInt2)) {
+if (!isNaN(parInt1) || !isNaN(parInt2)) {
   // create variable for result and call function on parsed cli args
   const result = add(parInt1, parInt2);
   console.log(result);
