@@ -7,6 +7,6 @@ Write a function that prints the number of arguments already printed and the new
 // count to keep track of arguments already printed
 let count = 0;
 exports.logMe = function (item) {
-  console.log(count + ':' + item);
+  console.log(count + ': ' + item);
   count++;
 };
