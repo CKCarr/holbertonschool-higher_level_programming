@@ -97,7 +97,7 @@ Repo:
     Directory: javascript-web_scraping
 
 ###### 0. Readme 
-File: 0-readme.js: 
+File: 0-readme.js:
 Write a script that reads and prints the content of a file.
 
 The first argument is the file path
