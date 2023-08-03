@@ -15,14 +15,14 @@ const filePath = process.argv[2];
 /* The 'fs.readFile()' method reads the content of the file asynchronously.
 It takes three arguments:
 1. The file path to read.
-2. The encoding to use while reading the file. 
+2. The encoding to use while reading the file.
     In this case, 'utf-8' is used to read the file as a text file.
 3. A callback function that will be called
     when the reading is complete or an error occurs. */
-fs.readFile(filePath, 'utf-8', (err,data) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(data);
-    }
+fs.readFile(filePath, 'utf-8', (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
 });
