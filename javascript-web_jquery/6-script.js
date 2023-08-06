@@ -5,3 +5,8 @@ Write a JavaScript script that updates the text of the <header> element to New H
     You can’t use document.querySelector to select the HTML tag
     You must use the JQuery API
  */
+$(function () {
+    $('#update_header').click(function () {
+        $('header').text('New Header!!!')
+    });
+});
