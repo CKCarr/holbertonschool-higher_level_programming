@@ -8,7 +8,7 @@ Write a JavaScript script that fetches from https://stefanbohacek.com/hellosalut
     Your script must work when it is imported from the <head> tag
  */
 $(document).ready(function () {
-    $.get('https://stefanbohacek.com/hellosalut/?lang=fr', function (data) {
+    $.get('https://hellosalut.stefanbohacek.dev/?lang=fr', function (data) {
         $('#hello').text(data.hello);
     }).fail(function () {
         $('#hello').text('Error fetching data');
