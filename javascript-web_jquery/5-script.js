@@ -7,3 +7,8 @@ Write a JavaScript script that adds a <li> element to a list when the user click
     You can’t use document.querySelector to select the HTML tag
     You must use the JQuery API
  */
+$(function () {
+    $('#add_item').click(function () {
+        $('.my_list').append('<li>Item</li>')
+    })
+})

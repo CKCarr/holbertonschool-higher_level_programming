@@ -5,3 +5,8 @@ Write a JavaScript script that updates the text color of the <header> element to
     You can’t use document.querySelector to select the HTML tag
     You must use the JQuery API
  */
+$(function () {
+    $('#red_header').on('click', function () {
+        $('header').css('color', '#FF0000');
+    });
+});

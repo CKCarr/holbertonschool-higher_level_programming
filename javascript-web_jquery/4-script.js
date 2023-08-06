@@ -7,3 +7,8 @@ Write a JavaScript script that toggles the class of the <header> element when th
     You can’t use document.querySelector to select the HTML tag
     You must use the JQuery API
  */
+$(function () {
+    $('#toggle_header').click(function () {
+        $('header').toggleClass('red green');
+    });
+});
